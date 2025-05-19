@@ -24,12 +24,15 @@ repositories {
 }
 
 dependencies {
+	compileOnly("org.projectlombok:lombok:1.18.38")
+	annotationProcessor("org.projectlombok:lombok:1.18.38")
+	implementation("com.fasterxml.jackson.core:jackson-core:2.19.0")
+	implementation("com.fasterxml.jackson.core:jackson-databind:2.19.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("com.h2database:h2")
-	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.mockito:mockito-core:5.12.0")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
